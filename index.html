@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RISC Architecture Presentation</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+    <div class="mesh"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <main class="presentation" id="presentation">
+    <div class="help">Use Arrow Keys, Space, or Buttons</div>
+
+    <div class="slides" id="slides">
+      <section class="slide is-active" data-transition="fade" aria-label="Slide 1">
+        <div>
+          <span class="kicker reveal">Computer Architecture</span>
+          <h1 class="slide-title reveal">RISC Architecture</h1>
+          <p class="slide-subtitle reveal">Reduced Instruction Set Computer</p>
+        </div>
+
+        <div class="hero">
+          <div>
+            <p class="lead reveal">A streamlined CPU design philosophy where simple instructions execute quickly, enabling efficient pipelining and excellent performance per watt.</p>
+            <ul class="list reveal">
+              <li>Simple operations, optimized execution</li>
+              <li>Load/store memory access model</li>
+              <li>Foundation of modern mobile and embedded processors</li>
+            </ul>
+          </div>
+
+          <div class="hero-art reveal" aria-hidden="true">
+            <svg viewBox="0 0 500 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="120" y="70" width="260" height="220" rx="20" stroke="url(#chipStroke)" stroke-width="2" fill="rgba(13,20,46,0.62)" />
+              <rect x="180" y="130" width="140" height="100" rx="14" stroke="#89C6FF" stroke-opacity="0.8" fill="rgba(48,91,170,0.25)" />
+              <text x="250" y="188" text-anchor="middle" fill="#D6E9FF" font-size="20" font-family="Inter">RISC Core</text>
+
+              <g stroke="#7FC9FF" stroke-opacity="0.65">
+                <line x1="120" y1="110" x2="80" y2="110" />
+                <line x1="120" y1="150" x2="64" y2="150" />
+                <line x1="120" y1="190" x2="72" y2="190" />
+                <line x1="120" y1="230" x2="90" y2="230" />
+                <line x1="380" y1="110" x2="420" y2="110" />
+                <line x1="380" y1="150" x2="438" y2="150" />
+                <line x1="380" y1="190" x2="430" y2="190" />
+                <line x1="380" y1="230" x2="414" y2="230" />
+              </g>
+
+              <circle cx="80" cy="110" r="4" fill="#78DAFF" />
+              <circle cx="64" cy="150" r="4" fill="#78DAFF" />
+              <circle cx="72" cy="190" r="4" fill="#78DAFF" />
+              <circle cx="90" cy="230" r="4" fill="#78DAFF" />
+              <circle cx="420" cy="110" r="4" fill="#A89AFF" />
+              <circle cx="438" cy="150" r="4" fill="#A89AFF" />
+              <circle cx="430" cy="190" r="4" fill="#A89AFF" />
+              <circle cx="414" cy="230" r="4" fill="#A89AFF" />
+
+              <defs>
+                <linearGradient id="chipStroke" x1="120" y1="70" x2="380" y2="290" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6AC6FF" />
+                  <stop offset="1" stop-color="#A174FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="slide" aria-label="Slide 2">
+        <div>
+          <span class="kicker reveal">Slide 2</span>
+          <h2 class="slide-title reveal">Team Information</h2>
+          <div class="team-meta reveal">
+            <p class="team-name">Team RISC</p>
+            <p class="muted">RISC Architecture Presentation Group</p>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal"><strong>Md. Shakhawat Hossain</strong><span>23017</span></article>
+          <article class="team-card reveal"><strong>Zarin Rafa</strong><span>23030</span></article>
+          <article class="team-card reveal"><strong>Tahsin Jabin Rafa</strong><span>23058</span></article>
+          <article class="team-card reveal"><strong>Nusrat Jahan Anika</strong><span>23033</span></article>
+          <article class="team-card reveal"><strong>Syeda Bushra</strong><span>23045</span></article>
+          <article class="team-card reveal"><strong>Marjana Tasnim Karima</strong><span>23001</span></article>
+          <article class="team-card reveal"><strong>Israt Jahan Nazah</strong><span>23034</span></article>
+          <article class="team-card reveal"><strong>Shanjida Afrin</strong><span>23032</span></article>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="zoom" aria-label="Slide 3">
+        <div>
+          <span class="kicker reveal">Slide 3</span>
+          <h2 class="slide-title reveal">Introduction to RISC</h2>
+          <p class="slide-subtitle reveal">RISC keeps instructions small and predictable, so CPUs can process them quickly and efficiently.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card reveal">
+            <h3>Simple Idea</h3>
+            <p class="body-text">Each instruction does one basic operation. This simplicity makes hardware easier to optimize and helps processors run at higher speed with lower power.</p>
+            <ul class="list">
+              <li>Most operations complete in one cycle</li>
+              <li>Memory is accessed through dedicated load and store instructions</li>
+              <li>Compiler does more optimization work</li>
+            </ul>
+          </div>
+
+          <div class="three-col">
+            <article class="icon-card reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 12h9" />
+                  <path d="M10 6l6 6-6 6" />
+                </svg>
+              </div>
+              <h3>Fast Path</h3>
+              <p>Short instruction decoding improves throughput.</p>
+            </article>
+
+            <article class="icon-card reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="3" />
+                  <path d="M8 9h8M8 12h8M8 15h5" />
+                </svg>
+              </div>
+              <h3>Structured ISA</h3>
+              <p>Regular formats reduce hardware complexity.</p>
+            </article>
+
+            <article class="icon-card reveal">
+              <div class="icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 16l5-5 4 4 7-7" />
+                  <path d="M16 8h4v4" />
+                </svg>
+              </div>
+              <h3>Pipeline Friendly</h3>
+              <p>Predictable instructions suit deep pipelining.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-4 compact-horizontal" data-transition="slide" aria-label="Slide 4">
+        <div>
+          <span class="kicker reveal">Slide 4</span>
+          <h2 class="slide-title reveal">RISC vs CISC</h2>
+          <p class="slide-subtitle reveal">Both architectures solve the same problem differently: simplicity and speed versus instruction richness.</p>
+        </div>
+
+        <div class="card reveal">
+          <table class="comparison" aria-label="RISC vs CISC comparison table">
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>RISC</th>
+                <th>CISC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="reveal">
+                <td>Instruction Set</td>
+                <td>Small and simple</td>
+                <td>Large and complex</td>
+              </tr>
+              <tr class="reveal">
+                <td>Instruction Length</td>
+                <td>Usually fixed</td>
+                <td>Variable</td>
+              </tr>
+              <tr class="reveal">
+                <td>Execution Cycles</td>
+                <td>Often single-cycle</td>
+                <td>Often multi-cycle</td>
+              </tr>
+              <tr class="reveal">
+                <td>Memory Access</td>
+                <td>Load/store only</td>
+                <td>Memory in many instructions</td>
+              </tr>
+              <tr class="reveal">
+                <td>Control Unit</td>
+                <td>Hardwired, simpler</td>
+                <td>Microcoded, more complex</td>
+              </tr>
+              <tr class="reveal">
+                <td>Code Density</td>
+                <td>Lower in some cases</td>
+                <td>Higher in some cases</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="slide slide-5 compact-horizontal" data-transition="fade" aria-label="Slide 5">
+        <div>
+          <span class="kicker reveal">Slide 5</span>
+          <h2 class="slide-title reveal">Key Features of RISC</h2>
+          <p class="slide-subtitle reveal">Design choices that make RISC efficient and scalable.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M5 7h14" />
+                <path d="M5 17h14" />
+              </svg>
+            </div>
+            <h3>Fixed-Length Instructions</h3>
+            <p>Decoding is faster and pipeline stages stay balanced.</p>
+          </article>
+
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M8 8h8v8H8z" />
+              </svg>
+            </div>
+            <h3>Large Register File</h3>
+            <p>More operations stay inside CPU registers, reducing memory traffic.</p>
+          </article>
+
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16v5H4z" />
+                <path d="M4 13h9v5H4z" />
+                <path d="M17 13h3v5h-3z" />
+              </svg>
+            </div>
+            <h3>Load/Store Architecture</h3>
+            <p>Only load and store instructions access memory directly.</p>
+          </article>
+
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 19h14" />
+                <path d="M7 15l4-4 3 3 3-3" />
+                <path d="M7 7h10" />
+              </svg>
+            </div>
+            <h3>Few Addressing Modes</h3>
+            <p>Simple addressing improves hardware predictability.</p>
+          </article>
+
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18" />
+                <path d="M6 8h12" />
+                <path d="M6 16h12" />
+              </svg>
+            </div>
+            <h3>Pipeline Optimization</h3>
+            <p>Regular instruction flow enables deeper and faster pipelines.</p>
+          </article>
+
+          <article class="feature-item reveal">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </div>
+            <h3>Hardwired Control Logic</h3>
+            <p>Lower latency and lower control complexity.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="zoom" aria-label="Slide 6">
+        <div>
+          <span class="kicker reveal">Slide 6</span>
+          <h2 class="slide-title reveal">Load/Store Architecture Diagram</h2>
+          <p class="slide-subtitle reveal">Only load/store instructions touch memory; computation happens between registers and ALU.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="diagram reveal">
+            <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <defs>
+                <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4faeff" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#9a72ff" stop-opacity="0.2"/>
+                </linearGradient>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 z" fill="#9fd3ff" />
+                </marker>
+              </defs>
+
+              <rect x="40" y="150" width="190" height="120" rx="18" fill="url(#box)" stroke="#87c8ff" stroke-opacity="0.8"/>
+              <text x="135" y="196" text-anchor="middle" fill="#E5F1FF" font-size="20" font-family="Inter">Data Memory</text>
+              <text x="135" y="224" text-anchor="middle" fill="#B9CCF7" font-size="15" font-family="Inter">RAM / Cache</text>
+
+              <rect x="290" y="82" width="190" height="120" rx="18" fill="url(#box)" stroke="#86c7ff" stroke-opacity="0.85"/>
+              <text x="385" y="128" text-anchor="middle" fill="#E5F1FF" font-size="20" font-family="Inter">Register File</text>
+              <text x="385" y="156" text-anchor="middle" fill="#B9CCF7" font-size="15" font-family="Inter">R0...Rn</text>
+
+              <rect x="290" y="236" width="190" height="120" rx="18" fill="url(#box)" stroke="#ad93ff" stroke-opacity="0.85"/>
+              <text x="385" y="282" text-anchor="middle" fill="#E5F1FF" font-size="20" font-family="Inter">ALU</text>
+              <text x="385" y="310" text-anchor="middle" fill="#C5B8FF" font-size="15" font-family="Inter">Arithmetic / Logic</text>
+
+              <rect x="540" y="150" width="180" height="120" rx="18" fill="url(#box)" stroke="#7fd8ff" stroke-opacity="0.82"/>
+              <text x="630" y="196" text-anchor="middle" fill="#E5F1FF" font-size="20" font-family="Inter">Control Unit</text>
+              <text x="630" y="224" text-anchor="middle" fill="#B9CCF7" font-size="15" font-family="Inter">Decode & Timing</text>
+
+              <line x1="230" y1="180" x2="290" y2="130" stroke="#9fd3ff" stroke-width="3" marker-end="url(#arrow)"/>
+              <line x1="290" y1="162" x2="230" y2="210" stroke="#9fd3ff" stroke-width="3" marker-end="url(#arrow)"/>
+              <line x1="385" y1="202" x2="385" y2="236" stroke="#9fd3ff" stroke-width="3" marker-end="url(#arrow)"/>
+              <line x1="385" y1="236" x2="385" y2="202" stroke="#b8a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+              <line x1="480" y1="142" x2="540" y2="180" stroke="#9fd3ff" stroke-width="3" marker-end="url(#arrow)"/>
+              <line x1="540" y1="236" x2="480" y2="300" stroke="#b8a7ff" stroke-width="3" marker-end="url(#arrow)"/>
+
+              <text x="238" y="170" fill="#BFE0FF" font-size="14" font-family="Inter">Load</text>
+              <text x="238" y="244" fill="#BFE0FF" font-size="14" font-family="Inter">Store</text>
+              <text x="402" y="222" fill="#D4C8FF" font-size="14" font-family="Inter">Execute</text>
+            </svg>
+          </div>
+
+          <div class="card reveal">
+            <h3>How It Works</h3>
+            <ul class="list">
+              <li>Load instruction moves data from memory to registers.</li>
+              <li>ALU performs computation only on register values.</li>
+              <li>Store instruction writes result back to memory.</li>
+            </ul>
+            <p class="body-text" style="margin-top: 14px;">This separation is a core reason why RISC processors are easier to pipeline and optimize.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide slide-7 compact-horizontal" data-transition="slide" aria-label="Slide 7">
+        <div>
+          <span class="kicker reveal">Slide 7</span>
+          <h2 class="slide-title reveal">Advantages of RISC</h2>
+          <p class="slide-subtitle reveal">Where RISC architecture delivers practical engineering value.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <h3>High Performance per Watt</h3>
+            <p>Simple decoding and efficient pipelines reduce energy use for each instruction.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Simpler Hardware Design</h3>
+            <p>Lower control complexity can reduce design risk and verification time.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Pipeline Scalability</h3>
+            <p>Consistent instruction behavior supports deeper pipelines and parallel issue.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Compiler Optimization Friendly</h3>
+            <p>Regular instruction patterns give compilers more predictable optimization targets.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Better Real-Time Predictability</h3>
+            <p>Instruction timing tends to be easier to model in embedded systems.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Strong Fit for Mobile and Edge</h3>
+            <p>Excellent balance of power, thermals, and sustained performance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="fade" aria-label="Slide 8">
+        <div>
+          <span class="kicker reveal">Slide 8</span>
+          <h2 class="slide-title reveal">Disadvantages of RISC</h2>
+          <p class="slide-subtitle reveal">Trade-offs that appear in software size, tooling, and system constraints.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card-grid">
+            <article class="card reveal">
+              <h3>More Instructions per Task</h3>
+              <p>Complex operations may require multiple simple instructions.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Potentially Larger Program Size</h3>
+              <p>More instructions can increase binary size in some workloads.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Compiler Dependency</h3>
+              <p>Strong performance often depends on advanced compiler optimization.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Compatibility Challenges</h3>
+              <p>Migration from legacy CISC ecosystems can require software adaptation.</p>
+            </article>
+          </div>
+
+          <div class="card reveal">
+            <h3>Engineering Consideration</h3>
+            <p class="body-text">RISC is not automatically better for every scenario. Architecture choice should match workload, software ecosystem, power budget, and market requirements.</p>
+            <p class="body-text" style="margin-top: 12px;">In many modern systems, hybrid strategies and strong toolchains help mitigate these disadvantages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="zoom" aria-label="Slide 9">
+        <div>
+          <span class="kicker reveal">Slide 9</span>
+          <h2 class="slide-title reveal">Real-Life Examples</h2>
+          <p class="slide-subtitle reveal">RISC powers everything from smartphones to custom edge silicon.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card-grid">
+            <article class="example-card reveal">
+              <div class="example-title">
+                <div class="logo-dot" aria-hidden="true"></div>
+                <h3>ARM</h3>
+              </div>
+              <p>Widely used in mobile devices, wearables, networking gear, and modern laptop-class SoCs.</p>
+              <ul class="list" style="margin-top: 10px;">
+                <li>Energy-efficient cores</li>
+                <li>Huge commercial ecosystem</li>
+              </ul>
+            </article>
+
+            <article class="example-card reveal">
+              <div class="example-title">
+                <div class="logo-dot" aria-hidden="true"></div>
+                <h3>RISC-V</h3>
+              </div>
+              <p>Open ISA enabling custom processors for education, embedded systems, and specialized accelerators.</p>
+              <ul class="list" style="margin-top: 10px;">
+                <li>Open standard architecture</li>
+                <li>Rapid innovation and extensibility</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="card reveal">
+            <h3>Where You See RISC Today</h3>
+            <ul class="list">
+              <li>Smartphones and tablets</li>
+              <li>IoT and smart home devices</li>
+              <li>Automotive controllers and sensors</li>
+              <li>Routers, switches, and embedded networking</li>
+              <li>Research and custom AI/edge chips</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-transition="fade" aria-label="Slide 10">
+        <div>
+          <span class="kicker reveal">Slide 10</span>
+          <h2 class="final-title reveal">Conclusion</h2>
+          <p class="quote reveal">RISC architecture proves that simplicity at the instruction level can create exceptional speed, efficiency, and scalability in real-world systems.</p>
+        </div>
+
+        <div class="pill-row">
+          <article class="pill reveal">
+            <h3>Simple Instructions</h3>
+            <p>Fast decode, predictable execution, cleaner pipelines.</p>
+          </article>
+          <article class="pill reveal">
+            <h3>Efficient Hardware</h3>
+            <p>Lower complexity and strong power-performance balance.</p>
+          </article>
+          <article class="pill reveal">
+            <h3>Future Ready</h3>
+            <p>Core of modern mobile, embedded, and open ISA innovation.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="deck-ui" aria-label="Slide navigation controls">
+      <button class="btn" id="prevBtn" type="button">Previous</button>
+      <div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
+      <div class="dots" id="dots"></div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button class="btn" id="nextBtn" type="button">Next</button>
+        <div class="counter" id="counter">1 / 10</div>
+      </div>
+    </div>
+  </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

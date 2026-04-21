@@ -295,14 +295,14 @@
     }
 
     .slide-5 .card-grid,
-    .slide-7 .card-grid {
+    .slide-8 .card-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       align-content: start;
     }
 
     .slide-5 .feature-item,
-    .slide-7 .card {
+    .slide-8 .card {
       padding: 12px;
     }
 
@@ -323,7 +323,7 @@
       line-height: 1.25;
     }
 
-    .slide-7 .card h3 {
+    .slide-8 .card h3 {
       font-size: clamp(1.08rem, 1.35vw, 1.22rem);
       line-height: 1.32;
     }
@@ -334,7 +334,7 @@
       line-height: 1.35;
     }
 
-    .slide-7 .card p {
+    .slide-8 .card p {
       margin-top: 4px;
       font-size: clamp(0.96rem, 1.12vw, 1.06rem);
       line-height: 1.44;
@@ -1195,7 +1195,7 @@
       }
 
       .slide-5 .card-grid,
-      .slide-7 .card-grid {
+      .slide-8 .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
